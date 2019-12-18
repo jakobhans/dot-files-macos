@@ -1,0 +1,20 @@
+*.log
+
+# Stupid Apple
+*.DS_Store
+
+#Git ftp temp file
+.git-ftp-tmp
+
+# VIM
+*~
+*.swp
+*.swo
+
+# Vagrant
+/.vagrant
+boxes/*
+acceptance_config.yml
+/vagrant-spec.config.rb
+
+tags

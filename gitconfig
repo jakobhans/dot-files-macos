@@ -1,0 +1,22 @@
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+    st = status -sb
+    a = add .
+    c = commit
+    cm = commit -m
+    p = push
+    b = branch
+    d = diff
+    m = merge
+    f = fetch
+    fp = ftp push -s
+[color]
+	ui = true
+[user]
+	name = Jakob H. Renpening
+	email = jakob.renpening@wizeline.com
+[core]
+	excludesfile = /home/jakobhans/.gitignore_global
+    editor = vim
+[push]
+	default = simple

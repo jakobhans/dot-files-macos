@@ -1,0 +1,6 @@
+# General aliases
+alias lsa='ls -a'
+alias lsl='ls -la'
+alias ctags='ctags -R --exclude=node_modules'
+alias g='git'
+alias ht='htop --sort-key=PERCENT_CPU'
