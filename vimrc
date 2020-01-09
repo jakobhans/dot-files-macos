@@ -22,7 +22,7 @@ set t_Co=256
 
 " Formatting, syntax and displaying
 set formatoptions=qrn1
-set tabstop=4
+set tabstop=2
 set shiftwidth=4
 set expandtab
 set wrap
