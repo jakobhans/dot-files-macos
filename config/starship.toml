@@ -1,0 +1,4 @@
+# ~/.config/starship.toml
+
+[username]
+show_always = true

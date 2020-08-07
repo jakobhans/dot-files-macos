@@ -21,6 +21,7 @@ highlight CursorLine term=bold cterm=bold ctermbg=237
 set t_Co=256
 
 " Formatting, syntax and displaying
+set autoindent
 set formatoptions=qrn1
 set tabstop=2
 set shiftwidth=4
