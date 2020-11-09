@@ -45,22 +45,14 @@ set smartcase
 set gdefault
 set synmaxcol=350
 
-" statusline display 
-"set statusline=
-"set statusline+=%f                                   "tail of the filename
-"set statusline+=[%{strlen(&fenc)?&fenc:'none'},     "file encoding
-"set statusline+=%{&ff}]                             "file format
-"set statusline+=%#warningmsg#                       "warning messages
-"set statusline+=%{SyntasticStatuslineFlag()}        "Syntastic flag
-"set statusline+=%*                                  "End of syntastic flag
-"set statusline+=%h                                  "help file flag
-"set statusline+=%m                                  "modified flag
-"set statusline+=%r                                  "read only flag
-"set statusline+=%y                                  "filetype
-"set statusline+=%=                                  "left/right separator
-"set statusline+=%c,                                 "cursor column
-"set statusline+=%l/%L                               "cursor line/total lines
-"set statusline+=\ %P                                "percent through file
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[1 q"
+
+" Optionally reset the cursor on start:
+augroup myCmds
+au!
+autocmd VimEnter * silent !echo -ne "\e[2 q"
+augroup END
 
 " Backup 
 if isdirectory($HOME . '/.vim/backup') == 0
@@ -122,10 +114,19 @@ noremap <leader>w :bn<CR>
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 
-set pastetoggle=<D-p>
+function! TogglePaste()
+    if(&paste == 0)
+        set paste
+    else
+        set nopaste
+    endif
+endfunction
+
+map <leader>p :call TogglePaste()<cr>
 
 au BufRead,BufNewFile *.blade.php set filetype=html
 au BufRead,BufNewFile filetype php set filetype=html
+
 
 " Notes
 " - zz to center screen
