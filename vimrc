@@ -122,7 +122,7 @@ noremap <leader>w :bn<CR>
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
 
-set pastetoggle=<F10>
+set pastetoggle=<D-p>
 
 au BufRead,BufNewFile *.blade.php set filetype=html
 au BufRead,BufNewFile filetype php set filetype=html
