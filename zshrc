@@ -47,7 +47,7 @@ export PATH=$HOME/.cargo/bin:$PATH
 export LC_ALL=en_US.UTF-8
 
 #fzf
-FZF_DEFAULT_COMMAND='ag -g ""'
+FZF_DEFAULT_COMMAND='ag -hidden --ignore .git --ignore node_modules -g ""'
 
 
 #Description after some actions
