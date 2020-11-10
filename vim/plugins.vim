@@ -16,6 +16,7 @@ Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
+Plug 'ekalinin/Dockerfile.vim'
 call plug#end()
 
 " Gruvbox color theme

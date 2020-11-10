@@ -24,7 +24,7 @@ set t_Co=256
 set autoindent
 set formatoptions=qrn1
 set tabstop=2
-set shiftwidth=4
+set shiftwidth=2
 set expandtab
 set wrap
 set textwidth=79
