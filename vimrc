@@ -2,7 +2,6 @@
 if !has ('g:syntax_on')
     syntax enable
 endif
-set viewoptions=cursor,folds,slash,unix     " saving cursor position, folds, slashes and unix EOL format
 set viminfo+=n~/.vim/viminfo
 set mouse=a
 
@@ -22,6 +21,7 @@ set t_Co=256
 
 " Formatting, syntax and displaying
 set autoindent
+set smartindent
 set formatoptions=qrn1
 set tabstop=2
 set shiftwidth=2
