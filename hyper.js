@@ -140,6 +140,11 @@ module.exports = {
     // for advanced config flags please refer to https://hyper.is/#cfg
     
     // Custom Config
+    config: {
+      hyperTabs: {
+        tabIconsColored: true
+      }
+    }
   },
 
   // a list of plugins to fetch and install from npm
@@ -148,7 +153,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyperterm-gruvbox-dark', "hyper-init"],
+  plugins: ['hyperterm-gruvbox-dark', "hyper-init", "hypercwd", "hyper-quit", "hyper-tabs-enhanced"],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

@@ -8,7 +8,6 @@ Plug 'neoclide/coc.nvim' , { 'branch' : 'release' }
 Plug 'vim-syntastic/syntastic'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'tpope/vim-fugitive'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
@@ -19,7 +18,14 @@ Plug 'leafgarland/typescript-vim'
 Plug 'pangloss/vim-javascript'
 Plug 'eslint/eslint'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
+
+" coc extensions
+let g:coc_global_extensions = ['coc-tsserver']
+
+" Golang
+let g:go_def_mapping_enabled = 0
 
 " Gruvbox color theme
 let g:gruvbox_italic = 1

@@ -27,6 +27,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set wrap
+set nofixendofline
 set textwidth=79
 set history=50
 set scrolloff=3
@@ -36,6 +37,7 @@ set backspace=indent,eol,start
 set number
 set relativenumber
 set showcmd
+set cmdheight=2
 set wildmenu
 set wildmode=full
 set lazyredraw
@@ -44,6 +46,13 @@ set infercase
 set smartcase
 set gdefault
 set synmaxcol=350
+set signcolumn=yes
+
+" Functionality
+set nobackup
+set nowritebackup
+set updatetime=300
+set shortmess+=c
 
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[1 q"
@@ -53,17 +62,6 @@ augroup myCmds
 au!
 autocmd VimEnter * silent !echo -ne "\e[2 q"
 augroup END
-
-" Backup 
-if isdirectory($HOME . '/.vim/backup') == 0
-    :silent !mkdir -p ~/.vim/backup >/dev/null 2>&1
-endif
-set backupdir-=.
-set backupdir+=.
-set backupdir-=~/
-set backupdir^=~/.vim/backup/
-set backupdir^=./.vim-backup/
-set backup
 
 " Swap Files
 if isdirectory($HOME . '/.vim/swap') == 0
@@ -113,6 +111,8 @@ noremap <leader>w :bn<CR>
 
 nnoremap <expr> j v:count ? 'j' : 'gj'
 nnoremap <expr> k v:count ? 'k' : 'gk'
+
+inoremap <silent><expr> <c-space> coc#refresh()
 
 function! TogglePaste()
     if(&paste == 0)
