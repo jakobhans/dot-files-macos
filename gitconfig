@@ -22,3 +22,5 @@
 	default = simple
 [credential]
 	helper = cache
+[init]
+	defaultBranch = main

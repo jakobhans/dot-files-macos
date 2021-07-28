@@ -28,6 +28,7 @@ set shiftwidth=2
 set expandtab
 set wrap
 set nofixendofline
+set noendofline
 set textwidth=79
 set history=50
 set scrolloff=3
@@ -101,7 +102,7 @@ nnoremap <space> za
 " Auto load vimrc on save
 augroup autosourcing
     autocmd!
-    autocmd BufWritePost vimrc source ~/.vimrc 
+    autocmd BufWritePost vimrc source ~/.vimrc
 augroup END
 
 " General remappings
@@ -126,6 +127,9 @@ map <leader>p :call TogglePaste()<cr>
 
 au BufRead,BufNewFile *.blade.php set filetype=html
 au BufRead,BufNewFile filetype php set filetype=html
+
+" Remove end of file empty line on save
+autocmd BufWritePre * %s/\s\+$//e
 
 
 " Notes
