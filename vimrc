@@ -29,6 +29,7 @@ set expandtab
 set wrap
 set nofixendofline
 set noendofline
+set noeol
 set textwidth=79
 set history=50
 set scrolloff=3
