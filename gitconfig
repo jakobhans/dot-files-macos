@@ -3,7 +3,7 @@
     st = status -sb
     a = add .
     c = commit
-    cm = commit -m
+    cm = cz
     p = push
     b = branch
     d = diff
@@ -16,7 +16,7 @@
 	name = Jakob H. Renpening
 	email = jakob.renpening@wizeline.com
 [core]
-	excludesfile = /home/jakobhans/.gitignore_global
+	excludesFile = /Users/jakob.renpening/.gitignore
     editor = vim
 [push]
 	default = simple
