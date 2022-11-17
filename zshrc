@@ -20,7 +20,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colorize brew macos node)
+plugins=(brew colorize docker git macos node)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -50,9 +50,9 @@ FZF_DEFAULT_COMMAND='ag -hidden --ignore .git --ignore node_modules -g ""'
 
 
 #Description after some actions
-for c in cp rm chmod chown rename; do
-    alias $c="pwd; $c -v"
-done
+#for c in cp rm chmod chown rename; do
+#    alias $c="pwd; $c -v"
+#done
 
 # Completion stuff
 autoload -Uz compinit
@@ -71,6 +71,8 @@ zstyle ':completion:*:descriptions' format '%B%d%b'
 zstyle ':completion:*:messages' format '%d'
 zstyle ':completion:*:warnings' format 'No matches for: %d'
 zstyle ':completion:*' verbose yes
+zstyle ':completion:*:*:docker:*' option-stacking yes
+zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

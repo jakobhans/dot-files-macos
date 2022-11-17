@@ -4,4 +4,4 @@ alias lsl='ls -la'
 alias ctags='ctags -R --exclude=node_modules'
 alias g='git'
 alias ht='htop --sort-key=PERCENT_CPU'
-alias npmfuckit="printf 'Removing node_modules folder and lock file...' && rm -rf ./node_modules && rm package-lock.json && npm i"
+alias npmfuckit="printf 'Removing node_modules folder and package-lock.js file...' && rm -rf ./node_modules && rm package-lock.json && npm i"

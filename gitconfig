@@ -3,7 +3,6 @@
     st = status -sb
     a = add .
     c = commit
-    cm = cz
     p = push
     b = branch
     d = diff
