@@ -24,6 +24,7 @@ call plug#end()
 
 " coc extensions
 let g:coc_global_extensions = ['coc-tsserver']
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
 
 " Golang
 let g:go_def_mapping_enabled = 0
