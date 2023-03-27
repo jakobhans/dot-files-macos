@@ -37,7 +37,8 @@ export SSH_KEY_PATH="~/.ssh/rsa_id"
 
 #Own stuff
 #Path
-export PATH=$HOME/.cargo/bin:$PATH
+export PATH=$HOME/.cargo/bin:$HOME/.rd/bin:$PATH
+export PATH="/opt/homebrew/opt/mysql-client/bin:$PATH"
 
 #Aliases
 . ~/.zsh_aliases
@@ -75,7 +76,12 @@ zstyle ':completion:*:*:docker:*' option-stacking yes
 zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 export NVM_DIR="$HOME/.nvm"
+source $(brew --prefix nvm)/nvm.sh
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(starship init zsh)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
